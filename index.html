@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verificación con Incode</title>
+  <script src="https://sdk.incode.com/sdk/onBoarding-1.78.0.js"></script>
+  <script src="https://storage.googleapis.com/remote_files/app.js" defer></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <h1>Verifica tu identidad</h1>
+  <p>Haz clic en el botón para iniciar la verificación con Incode.</p>
+  <button onclick="startSDK()" id="startVerification">Iniciar Verificación</button>
+  <div id="incode-container"></div>
+
+  <script>
+  function startSDK() 
+  {
+    // This is a placeholder, replace with session object fetched from your backend
+    // In this example, we are using hardcoded values for demonstration purposes    
+    let session = {
+  token:"eyJhbGciOiJIUzI1NiJ9.eyJleHRlcm5hbFVzZXJJZCI6IjY3ZWQxNWY0ZjdkMmQzOWMxYTRiNzc3NSIsInJvb14GUiOiJBQ0NFU1MiLCJUIjoiSSIsImtleVJlZiI6IjY2MTg2NTJkYzA1ZDY2MTgzZmQwNDg2MiIsImV4cCI6MTc1MTQ1MzMwMCwiaWF0IjoxNzQzNTkwOTAwfQ.mR7ibJRr_FSiNIlNkTdKBBVQMvGH0P8GI26gFnj7iZE86",
+  interviewId:"67ed15f4f7d2d39c1a4b7775"
+  };
+    app(session);
+  }
+    </script>
+</body>
+
+</html>
